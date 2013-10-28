@@ -1,0 +1,87 @@
+
+$general: #eef;
+$major: #efe;
+
+li.course {
+    font-size: 80%;
+}
+
+#planned-courses, #unorganized-courses {
+
+    ul {
+        overflow-y: scroll;
+        border: 1px solid #555;
+        padding: 10px;
+    }
+/** @todo import code from course-list . **/
+    li {
+        border-radius: 0px;
+        background-color: white;
+        padding: 8px;
+        margin: 0;
+        margin-top: -1px;
+        border: 1px solid #C5C5C5;
+        display: block;
+        list-style: none;
+        cursor: pointer;
+
+        &.general {
+            background-color: $general;
+        }
+
+        &.major {
+            background-color: $major;
+        }
+
+        &.completed {
+            cursor: normal;
+        }
+
+        .course-badge {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: #ddf;
+        }
+    }
+    .placeholder {
+        border: 1px solid darkyellow;
+        background-color: #ffa;
+        height: 2em;
+    }
+
+}
+
+#table-div {
+    width: 100%;
+    overflow: scroll;
+}
+
+#planned-courses {
+    ul {
+        width: 250px;
+        height: 300px;
+    }
+    th.past {
+        color: #522;
+    }
+    th span.delete {
+        cursor: pointer;
+        padding: 2px 5px;
+        margin: 2px;
+        color: red;
+
+        &:hover {
+            background-color: #faa;
+        }
+    }
+}
+
+#addtern li div.loading {
+    background-color: #ddd;
+}
+
+#unorganized-courses ul {
+    height: 500px;
+}

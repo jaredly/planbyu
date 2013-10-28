@@ -1,0 +1,19 @@
+<li class="requirement">
+    <div class="header" data-toggle="collapse" data-target="#children_{{ requirement.id }}">
+        <!--i class="icon-chevron-down"></i-->
+        <span class="badge {{ requirement.short_status }}"></span>
+        <span class="title">
+            {{ requirement.title }}
+        </span>
+        <span class="conditions">
+            : Fulfill {{ requirement.count }} of {{ requirement.children.count }}
+        </span>
+        {# include "courses/progress_bar.html" with chunks=program.full_chunks #}
+        <span class="collapsesome pull-right"></span>
+        <span class="expandsome pull-right"></span>
+        <span class="collapseall pull-right"></span>
+        <span class="expandall pull-right"></span>
+        <div class="loadingbar">{{ requirement.make_loadingbar|safe }}</div>
+    </div>
+    {# this is left open #}
+    <ul class="children collapse" id="children_{{ requirement.id }}">

@@ -1,0 +1,90 @@
+/* line 5, ../../resources/sass/course_planner.scss */
+li.course {
+  font-size: 80%;
+}
+
+/* line 9, ../../resources/sass/course_planner.scss */
+#planned-courses, #unorganized-courses {
+  /** @todo import code from course-list . **/
+}
+/* line 11, ../../resources/sass/course_planner.scss */
+#planned-courses ul, #unorganized-courses ul {
+  overflow-y: scroll;
+  border: 1px solid #555;
+  padding: 10px;
+}
+/* line 17, ../../resources/sass/course_planner.scss */
+#planned-courses li, #unorganized-courses li {
+  border-radius: 0px;
+  background-color: white;
+  padding: 8px;
+  margin: 0;
+  margin-top: -1px;
+  border: 1px solid #C5C5C5;
+  display: block;
+  list-style: none;
+  cursor: pointer;
+}
+/* line 28, ../../resources/sass/course_planner.scss */
+#planned-courses li.general, #unorganized-courses li.general {
+  background-color: #eeeeff;
+}
+/* line 32, ../../resources/sass/course_planner.scss */
+#planned-courses li.major, #unorganized-courses li.major {
+  background-color: #eeffee;
+}
+/* line 36, ../../resources/sass/course_planner.scss */
+#planned-courses li.completed, #unorganized-courses li.completed {
+  cursor: normal;
+}
+/* line 40, ../../resources/sass/course_planner.scss */
+#planned-courses li .course-badge, #unorganized-courses li .course-badge {
+  cursor: pointer;
+}
+/* line 44, ../../resources/sass/course_planner.scss */
+#planned-courses li:hover, #unorganized-courses li:hover {
+  background-color: #ddf;
+}
+/* line 48, ../../resources/sass/course_planner.scss */
+#planned-courses .placeholder, #unorganized-courses .placeholder {
+  border: 1px solid darkyellow;
+  background-color: #ffa;
+  height: 2em;
+}
+
+/* line 56, ../../resources/sass/course_planner.scss */
+#table-div {
+  width: 100%;
+  overflow: scroll;
+}
+
+/* line 62, ../../resources/sass/course_planner.scss */
+#planned-courses ul {
+  width: 250px;
+  height: 300px;
+}
+/* line 66, ../../resources/sass/course_planner.scss */
+#planned-courses th.past {
+  color: #522;
+}
+/* line 69, ../../resources/sass/course_planner.scss */
+#planned-courses th span.delete {
+  cursor: pointer;
+  padding: 2px 5px;
+  margin: 2px;
+  color: red;
+}
+/* line 75, ../../resources/sass/course_planner.scss */
+#planned-courses th span.delete:hover {
+  background-color: #faa;
+}
+
+/* line 81, ../../resources/sass/course_planner.scss */
+#addtern li div.loading {
+  background-color: #ddd;
+}
+
+/* line 85, ../../resources/sass/course_planner.scss */
+#unorganized-courses ul {
+  height: 500px;
+}

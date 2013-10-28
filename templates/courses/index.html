@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="/static/css/courses_list.css" rel="stylesheet" />
+{% endblock %}
+{% block end_js %}
+<script src="/static/js/libs/jquery.qtip.min.js"></script>
+<script src="/static/js/courses.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="top-examples">
+    <span class="badge completed"></span> - Completed
+    <span class="badge registered"></span> - Registered
+    <span class="badge organized"></span> - Organized
+    <span class="badge unorganized"></span> - Unorganized
+    <span class="badge notdone"></span> - Not Planned
+    <button id="hide-notdone" class="btn" data-toggle="button">Hide Not Planned Courses</button>
+</div>
+<ul id="all-projects">
+    {% for item in layout %}
+    {% if item == "]]" %}
+    {% elif item == "[[" %}
+        </ul></li>
+    {% elif item == "hide_notdone" %}
+        <li class="hidenotdone showing">
+            <span class="hide">Hide</span><span class="show">Show</span> Not Planned Courses
+        </li>
+    {% elif item.classname == "Course" %}
+        {% include "courses/course.html" with course=item %}
+    {% elif item.classname == "Requirement" %}
+        {% include "courses/requirement.html" with requirement=item %}
+    {% elif item.classname == "Program" %}
+        {% include "courses/program.html" with program=item %}
+    {% endif %}
+    {% endfor %}
+</ul>
+
+<ul class="navbar" id="badge-dd-parent">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Down</a>
+    <ul id="badge-dropdown" class="dropdown-menu">
+        <li><a class="completed"><span class="badge completed"></span>Completed</a></li>
+        <li><a class="registered"><span class="badge registered"></span>Registered</a></li>
+        <li><a class="organized"><span class="badge organized"></span>Organized</a></li>
+        <li><a class="unorganized"><span class="badge unorganized"></span>Unorganized</a></li>
+        <li class="divider"></li>
+        <li><a class="notdone"><span class="badge notdone"></span>Not Taking</a></li>
+    </ul>
+</div>
+
+<script>
+var URLS = {
+    'ajax-set-flag': '{% url "ajax_set_flag" %}',
+    'ajax-star': '{% url "ajax_star" %}',
+    'ajax-unstar': '{% url "ajax_unstar" %}',
+};
+</script>
+{% endblock %}
+

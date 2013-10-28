@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+        <!--[if IE]>
+        <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <![endif]-->
+
+        <title>{% block head_title %}BYU Planner{% endblock %}</title>
+        {% block extrahead %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div id="content-title">
+            {% block content_title %}{% endblock %}</div>
+        </div>
+
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        {% endblock %}
+    </body>
+</html>

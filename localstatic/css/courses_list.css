@@ -1,0 +1,240 @@
+/* line 9, ../../resources/sass/courses_list.scss */
+ul.badge-dropdown a {
+  cursor: pointer;
+}
+
+/* line 13, ../../resources/sass/courses_list.scss */
+.badge {
+  width: 13px;
+  height: 13px;
+  border-radius: 6.5px;
+  /**
+  background-color: #ddd;
+  float: left;
+  border: 2px solid white;
+  **/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 10px;
+}
+/* line 28, ../../resources/sass/courses_list.scss */
+.badge.completed {
+  background-color: darkgreen;
+}
+/* line 31, ../../resources/sass/courses_list.scss */
+.badge.registered {
+  background-color: #55aa55;
+}
+/* line 34, ../../resources/sass/courses_list.scss */
+.badge.organized {
+  background-color: #5555aa;
+}
+/* line 37, ../../resources/sass/courses_list.scss */
+.badge.unorganized {
+  background-color: #bbbbff;
+}
+/* line 40, ../../resources/sass/courses_list.scss */
+.badge.notdone {
+  background-color: #ff9999;
+}
+/* line 43, ../../resources/sass/courses_list.scss */
+.badge.loading {
+  background-color: grey;
+  background-image: url("/static/imgs/loading.png");
+}
+
+/* line 49, ../../resources/sass/courses_list.scss */
+div.top-examples {
+  padding: 8px 16px;
+}
+/* line 52, ../../resources/sass/courses_list.scss */
+div.top-examples .badge {
+  border-radius: 6px;
+  padding: 1px 9px;
+  margin-right: 5px;
+}
+
+/* line 59, ../../resources/sass/courses_list.scss */
+div.loadingbar {
+  border: 2px solid black;
+  float: right;
+}
+/* line 63, ../../resources/sass/courses_list.scss */
+div.loadingbar div {
+  float: left;
+}
+/* line 66, ../../resources/sass/courses_list.scss */
+div.loadingbar div.requirement {
+  border-left: 2px solid black;
+}
+/* line 69, ../../resources/sass/courses_list.scss */
+div.loadingbar div.requirement:first-child {
+  border-left: none;
+}
+/* line 73, ../../resources/sass/courses_list.scss */
+div.loadingbar div.course {
+  width: 20px;
+  height: 15px;
+}
+/* line 77, ../../resources/sass/courses_list.scss */
+div.loadingbar div.course.completed {
+  background-color: darkgreen;
+}
+/* line 80, ../../resources/sass/courses_list.scss */
+div.loadingbar div.course.registered {
+  background-color: #55aa55;
+}
+/* line 83, ../../resources/sass/courses_list.scss */
+div.loadingbar div.course.organized {
+  background-color: #5555aa;
+}
+/* line 86, ../../resources/sass/courses_list.scss */
+div.loadingbar div.course.unorganized {
+  background-color: #bbbbff;
+}
+/* line 89, ../../resources/sass/courses_list.scss */
+div.loadingbar div.course.notdone {
+  background-color: #ff9999;
+}
+
+/* line 96, ../../resources/sass/courses_list.scss */
+.star, .collapsesome, .collapseall, .expandsome, .expandall {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-bottom: -4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* line 104, ../../resources/sass/courses_list.scss */
+.star:hover, .collapsesome:hover, .collapseall:hover, .expandsome:hover, .expandall:hover {
+  background-color: #aaa;
+}
+
+/* line 109, ../../resources/sass/courses_list.scss */
+.star {
+  background-image: url("/static/imgs/star_off.png");
+}
+/* line 112, ../../resources/sass/courses_list.scss */
+.star:hover {
+  background-color: transparent;
+  background-image: url("/static/imgs/star_hover.png");
+}
+/* line 116, ../../resources/sass/courses_list.scss */
+.star.on, .star.on:hover {
+  background-image: url("/static/imgs/star_on.png");
+}
+
+/* line 122, ../../resources/sass/courses_list.scss */
+.collapsesome {
+  background-image: url("/static/imgs/coll_s.png");
+}
+
+/* line 125, ../../resources/sass/courses_list.scss */
+.expandsome {
+  background-image: url("/static/imgs/exp_s.png");
+}
+
+/* line 129, ../../resources/sass/courses_list.scss */
+.collapseall {
+  background-image: url("/static/imgs/coll_all_s.png");
+}
+
+/* line 132, ../../resources/sass/courses_list.scss */
+.expandall {
+  background-image: url("/static/imgs/exp_all_s.png");
+}
+
+/* line 136, ../../resources/sass/courses_list.scss */
+#all-projects {
+  margin-left: 0px;
+  padding: 0px 10px;
+}
+/* line 140, ../../resources/sass/courses_list.scss */
+#all-projects li, #all-projects ul {
+  list-style: none;
+}
+/* line 143, ../../resources/sass/courses_list.scss */
+#all-projects li {
+  margin-left: 0;
+}
+/* line 146, ../../resources/sass/courses_list.scss */
+#all-projects ul {
+  margin-left: 30px;
+}
+/* line 150, ../../resources/sass/courses_list.scss */
+#all-projects li.hidenotdone {
+  cursor: pointer;
+  font-size: 75%;
+}
+/* line 154, ../../resources/sass/courses_list.scss */
+#all-projects li.hidenotdone .show {
+  display: inline;
+}
+/* line 157, ../../resources/sass/courses_list.scss */
+#all-projects li.hidenotdone .hide {
+  display: none;
+}
+/* line 162, ../../resources/sass/courses_list.scss */
+#all-projects li.hidenotdone.showing .show {
+  display: none;
+}
+/* line 165, ../../resources/sass/courses_list.scss */
+#all-projects li.hidenotdone.showing .hide {
+  display: inline;
+}
+/* line 171, ../../resources/sass/courses_list.scss */
+#all-projects li.course {
+  border-radius: 0px;
+  background-color: white;
+  padding: 8px;
+  margin: 0;
+  margin-top: -1px;
+  border: 1px solid #C5C5C5;
+  display: block;
+}
+/* line 180, ../../resources/sass/courses_list.scss */
+#all-projects li.course .course-badge {
+  cursor: pointer;
+}
+/* line 184, ../../resources/sass/courses_list.scss */
+#all-projects li.course:hover {
+  background-color: #ddf;
+}
+/* line 188, ../../resources/sass/courses_list.scss */
+#all-projects li.course div.head {
+  /* cursor: pointer; */
+}
+/* line 193, ../../resources/sass/courses_list.scss */
+#all-projects .badge {
+  border-radius: 6px;
+  padding: 1px 9px;
+}
+/* line 199, ../../resources/sass/courses_list.scss */
+#all-projects li.requirement div.header, #all-projects div.header {
+  padding: 8px;
+  margin: 0;
+  margin-top: -1px;
+  border: 1px solid #C5C5C5;
+  border-radius: 10px;
+  display: block;
+  background-color: #F0F0F0;
+  cursor: pointer;
+}
+/* line 209, ../../resources/sass/courses_list.scss */
+#all-projects li.requirement div.header:hover, #all-projects div.header:hover {
+  background-color: #E0E0E0;
+}
+/* line 215, ../../resources/sass/courses_list.scss */
+#all-projects li.requirement div.header .expander, #all-projects div.header .expander {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background-color: red;
+  cursor: pointer;
+}
+/* line 222, ../../resources/sass/courses_list.scss */
+#all-projects li.requirement div.header .expander.closed, #all-projects div.header .expander.closed {
+  background-color: green;
+}

@@ -1,0 +1,229 @@
+
+$size: 13px;
+$completed: darkgreen;
+$registered: #5a5;
+$organized: #55a;
+$unorganized: #bbf;
+$notdone: #f99;
+
+ul.badge-dropdown a {
+    cursor: pointer;
+}
+
+.badge {
+    width: $size;
+    height: $size;
+    border-radius: $size / 2;
+    /**
+    background-color: #ddd;
+    float: left;
+    border: 2px solid white;
+    **/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    margin-right: 10px;
+
+    &.completed {
+        background-color: $completed;
+    }
+    &.registered {
+        background-color: $registered;
+    }
+    &.organized {
+        background-color: $organized;
+    }
+    &.unorganized {
+        background-color: $unorganized;
+    }
+    &.notdone {
+        background-color: $notdone;
+    }
+    &.loading {
+        background-color: grey;
+        background-image: url('/static/imgs/loading.png');
+    }
+}
+
+div.top-examples {
+    padding: 8px 16px;
+
+    .badge {
+        border-radius: 6px;
+        padding: 1px 9px;
+        margin-right: 5px;
+    }
+}
+
+div.loadingbar {
+    border: 2px solid black;
+    float: right;
+    margin-top: -2px;
+
+    div {
+        float: left;
+
+        &.requirement {
+            border-left: 2px solid black;
+        }
+        &.requirement:first-child {
+            border-left: none;
+        }
+
+        &.course {
+            width: 10px;
+            height: 20px;
+
+            &.completed {
+                background-color: $completed;
+            }
+            &.registered {
+                background-color: $registered;
+            }
+            &.organized {
+                background-color: $organized;
+            }
+            &.unorganized {
+                background-color: $unorganized;
+            }
+            &.notdone {
+                background-color: $notdone;
+            }
+        }
+    }
+}
+
+.star, .collapsesome, .collapseall, .expandsome, .expandall {
+    display: inline-block;
+    width:16px;
+    height: 16px;
+    margin-bottom: -4px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #aaa;
+    }
+}
+
+.star {
+    background-image: url('/static/imgs/star_off.png');
+
+    &:hover {
+        background-color: transparent;
+        background-image: url('/static/imgs/star_hover.png');
+    }
+    &.on, &.on:hover {
+        background-image: url('/static/imgs/star_on.png');
+    }
+}
+
+
+.collapsesome {
+    background-image: url('/static/imgs/coll_s.png');
+}
+.expandsome {
+    background-image: url('/static/imgs/exp_s.png');
+}
+
+.collapseall {
+    background-image: url('/static/imgs/coll_all_s.png');
+}
+.expandall {
+    background-image: url('/static/imgs/exp_all_s.png');
+}
+
+#all-projects {
+    margin-left: 0px;
+    padding: 0px 10px;
+
+    li, ul {
+        list-style: none;
+    }
+    li {
+        margin-left: 0;
+    }
+    ul {
+        margin-left: 30px;
+    }
+
+    li.hidenotdone {
+        cursor: pointer;
+        font-size: 75%;
+        
+        .show {
+            display: inline;
+        }
+        .hide {
+            display: none;
+        }
+
+        &.showing {
+            .show {
+                display: none;
+            }
+            .hide {
+                display: inline;
+            }
+        }
+    }
+
+    li.course {
+        border-radius: 0px;
+        background-color: white;
+        padding: 8px;
+        margin: 0;
+        margin-top: -1px;
+        border: 1px solid #C5C5C5;
+        display: block;
+
+        .course-badge {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: #ddf;
+        }
+
+        div.head {
+            /* cursor: pointer; */
+        }
+    }
+
+    .badge {
+        border-radius: 6px;
+        padding: 1px 9px;
+    }
+
+    li.requirement, & {
+        div.header {
+            padding: 8px;
+            margin: 0;
+            margin-top: -1px;
+            border: 1px solid #C5C5C5;
+            border-radius: 10px;
+            display: block;
+            background-color: #F0F0F0;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #E0E0E0;
+            }
+
+            > span.title {
+            }
+            .expander {
+                width: 20px;
+                height: 20px;
+                float: left;
+                background-color: red;
+                cursor: pointer;
+            }
+            .expander.closed {
+                background-color: green;
+            }
+        }
+    }
+
+}

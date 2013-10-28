@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="/static/css/courses_list.css" rel="stylesheet" />
+<link href="/static/css/course_planner.css" rel="stylesheet" />
+{% endblock %}
+{% block end_js %}
+<script src="/static/js/libs/jquery-ui.min.js"></script>
+<script src="/static/js/courses_planner.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div id="table-div">
+<table id="planned-courses">
+    <thead>
+        <tr> 
+            <th class="past">Waived</th>
+            {% for term in terms %}
+            <th class="{{ term.short }}{% if term.ispast %} past{% endif %}">
+                {{ term.long_name }}
+                {% if not term.ispast %}<span class="delete">&times;</span>{% endif %}
+            </th>
+            {% endfor %}
+            <th class="addterm">Add a Term</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="terms">
+            <td class="waived">
+                <ul class+"waived">
+                    {% for course in waived %}
+                    {% include "courses/planner_course.html" %}
+                    {% endfor %}
+                </ul>
+            </td>
+            {% for term in terms %}
+            <td class="term {{ term.short }}{% if term.ispast %} past{% endif %}">
+                <ul class="term {{ term.short }}">
+                    {% for course in term.courses %}
+                    {% include "courses/planner_course.html" %}
+                    {% endfor %}
+                </ul>
+            </td>
+            {% endfor %}
+            <td class="addterm">
+                <ul class="addterm">
+                    {% for term, long in next_terms %}
+                    <li>
+                        <div class="{{ term }}">{{ long }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div id="unorganized-courses">
+    <ul>
+        {% for course in unorganized %}
+            {% include "courses/planner_course.html" %}
+        {% endfor %}
+    </ul>
+</div>
+
+<script>
+var URLS = {
+    'add_term': '{% url "ajax_add_term" %}',
+    'remove_term': '{% url "ajax_remove_term" %}',
+    'move_course': '{% url "ajax_move_course" %}',
+};
+</script>
+
+{% endblock %}

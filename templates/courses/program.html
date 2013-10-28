@@ -1,0 +1,18 @@
+<li class="program">
+    <div class="header" data-toggle="collapse"
+        data-target="#program_children_{{ program.id }}">
+        <!--i class="icon-chevron-down"></i-->
+        <span class="badge {{ program.short_status }}"></span>
+        <span class="title">
+            {{ program.title }}
+        </span>
+        {# include "courses/progress_bar.html" with chunks=program.full_chunks #}
+        <span class="collapsesome pull-right"></span>
+        <span class="expandsome pull-right"></span>
+        <span class="collapseall pull-right"></span>
+        <span class="expandall pull-right"></span>
+        <div class="loadingbar">
+            {{ program.make_loadingbar|safe }}
+        </div>
+    </div>
+    <ul class="children collapse in" id="program_children_{{ program.id }}">

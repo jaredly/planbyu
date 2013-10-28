@@ -1,0 +1,18 @@
+{# expects argument "course" #}
+<li class="course {{ course.status }} course_{{ course.cid }}">
+    <div class="head" data-cid="{{ course.cid }}">
+        <a class="badge course-badge {{ course.status }}"></a>
+        <span class="star {{ course.starred|yesno:"on,off" }}"></span>
+        <span class="id">{{ course.department.code }} {{ course.num }}</span>
+        <span class="name">{{ course.long_name }}</span>
+        <span class="info">{{ course.credithours }}</span>
+        <button class="btn btn-mini btn-primary" data-toggle="collapse" data-target="#course_info_{{ course.cid }}">
+            More
+        </button>
+    </div>
+    <div id="course_info_{{ course.cid }}" class="collapse">
+        <span>{{ course.notes }}</span>
+        #todo mine the course info and serve it up here...
+        <a href="http://google.com/search?q=byu+{{ course.department.code|urlencode}}+{{ course.num|urlencode }}"> Google this Course </a>
+    </div>
+</li>

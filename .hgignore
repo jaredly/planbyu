@@ -1,0 +1,13 @@
+.*.pyc
+.*.swp
+.*.swo
+.vim.sess
+Main.vim.sess
+my.db
+.*.txt$
+.*.htm$
+^courses/management/commands/_special.py
+^static
+^resources/.sass-cache
+^localstatic/js/libs
+^localstatic/bootstrap
